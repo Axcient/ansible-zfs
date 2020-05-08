@@ -117,6 +117,7 @@ zfs_pools: []
   #   # Define pool type... | basic (no-raid) | mirror | raidz | raidz2 | raidz3
   #   type: mirror
   #   state: present
+  #   # force_import: true
   #   # override global scrub cron job parameters per zpool
   #   scrub_cron:
   #     # enable: False  # disable scrub cron job creation for this specific zpool

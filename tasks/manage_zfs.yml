@@ -1,4 +1,13 @@
 ---
+
+- name: manage_fs | force-importing existing zpools
+  command: "zpool import -f {{ item.name }}"
+  with_items: "{{ zfs_pools }}"
+  when: >
+        zfs_pools is defined and
+        item.force_import
+  ignore_errors: yes
+
 - name: manage_zfs | checking existing zpool(s)
   shell: "zpool list | awk 'FNR >1' | awk '{print $1}'"
   changed_when: false

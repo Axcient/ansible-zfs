@@ -318,6 +318,7 @@ zfs_pools:  #defines zpool(s) to manage
       - 'ata-INTEL_SSDSC2BW240A4_CVDA4010011R2403GN'
     type: 'raidz2'  #define pool type... | basic (no-raid) | mirror | raidz | raidz2 | raidz3
     state: 'present'
+#    force_import: true
   - name: 'SSD-TANK'
     action: 'add'
     compression: 'lz4'  # on | off (default) | lzjb | gzip | gzip-1 | gzip-2 | gzip-3 | gzip-4 | gzip-5 | gzip-6 | gzip-7 | gzip-8 | gzip-9 | lz4 | zle
